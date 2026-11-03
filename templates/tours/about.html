@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{% trans "À propos" %} — {{ site.name }}{% endblock %}
+{% block meta_description %}{% trans "Morocco Riwa Tours est une agence locale fondée par des familles berbères de l'Erg Chebbi. Rencontrez notre équipe et découvrez notre approche du tourisme responsable." %}{% endblock %}
+{% block content %}
+
+<section class="about-hero">
+  <div class="container" style="max-width:680px;">
+    <span class="tour-card__cats">{% trans "Notre histoire" %}</span>
+    <h1>{% trans "Nés dans le sable, guidés par le désert." %}</h1>
+    <p style="color:var(--charcoal-600); font-size:1.05rem;">{% trans "Morocco Riwa Tours est une agence locale fondée par des familles berbères de la région de l'Erg Chebbi. Depuis toujours, nous accompagnons les voyageurs dans le Sahara — pas comme des clients de passage, mais comme des invités." %}</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="value-grid">
+      <div class="value-card">
+        <span class="value-card__icon" aria-hidden="true"><i class="fa-solid fa-compass"></i></span>
+        <h3 style="font-size:1.05rem;">{% trans "Expertise locale" %}</h3>
+        <p style="color:var(--charcoal-600); font-size:0.92rem;">{% trans "Nos guides sont originaires de Merzouga et des environs : ils connaissent chaque dune, chaque piste, chaque famille nomade." %}</p>
+      </div>
+      <div class="value-card">
+        <span class="value-card__icon" aria-hidden="true"><i class="fa-solid fa-handshake"></i></span>
+        <h3 style="font-size:1.05rem;">{% trans "Tourisme responsable" %}</h3>
+        <p style="color:var(--charcoal-600); font-size:0.92rem;">{% trans "Nous travaillons avec les communautés locales et limitons notre impact sur l'écosystème fragile de l'Erg Chebbi." %}</p>
+      </div>
+      <div class="value-card">
+        <span class="value-card__icon" aria-hidden="true"><i class="fa-solid fa-person-hiking"></i></span>
+        <h3 style="font-size:1.05rem;">{% trans "Circuits sur mesure" %}</h3>
+        <p style="color:var(--charcoal-600); font-size:0.92rem;">{% trans "Chaque groupe est différent : nous adaptons durée, confort et itinéraire à vos envies et à votre rythme." %}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="container" style="text-align:center;">
+    <h2>{% trans "Envie de nous rencontrer ?" %}</h2>
+    <p style="color:var(--charcoal-600); max-width:480px; margin:12px auto 24px;">{% trans "Parlons de votre voyage : dates, nombre de personnes, niveau de confort souhaité." %}</p>
+    <a href="{% url 'tours:contact' %}" class="btn btn-primary">{% trans "Nous contacter" %}</a>
+  </div>
+</section>
+
+{% endblock %}

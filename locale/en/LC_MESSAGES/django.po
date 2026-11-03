@@ -1,0 +1,568 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-02 00:13+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "Français"
+msgstr "French"
+
+msgid "English"
+msgstr "English"
+
+msgid "Español"
+msgstr "Spanish"
+
+msgid "Morocco Riwa Tours — Excursions & circuits authentiques dans le Sahara"
+msgstr "Morocco Riwa Tours — Authentic Sahara desert excursions & tours"
+
+msgid ""
+"Agence locale à Merzouga : excursions dans le désert, nuits en campement "
+"berbère, balades à dos de chameau et circuits sur mesure au Maroc."
+msgstr ""
+"Local agency based in Merzouga: desert excursions, nights in a Berber camp, "
+"camel rides and tailor-made tours in Morocco."
+
+msgid "Accueil"
+msgstr "Home"
+
+msgid "Circuits"
+msgstr "Tours"
+
+msgid "À propos"
+msgstr "About"
+
+msgid "Contact"
+msgstr "Contact"
+
+msgid "Langue"
+msgstr "Language"
+
+msgid "Réserver"
+msgstr "Book now"
+
+msgid ""
+"Agence locale basée à Merzouga, aux portes de l'Erg Chebbi. Nous organisons "
+"des excursions authentiques dans le Sahara marocain depuis des années, avec "
+"des guides berbères passionnés."
+msgstr ""
+"Local agency based in Merzouga, at the gates of the Erg Chebbi. We have "
+"organized authentic excursions in the Moroccan Sahara for years, with "
+"passionate Berber guides."
+
+msgid "Navigation"
+msgstr "Navigation"
+
+msgid "Nos circuits"
+msgstr "Our tours"
+
+msgid "Merzouga, Maroc"
+msgstr "Merzouga, Morocco"
+
+msgid "Tous droits réservés."
+msgstr "All rights reserved."
+
+msgid "Conçu à Merzouga, porte du Sahara."
+msgstr "Designed in Merzouga, gateway to the Sahara."
+
+#, python-format
+msgid "%(counter)s jour"
+msgid_plural "%(counter)s jours"
+msgstr[0] "%(counter)s day"
+msgstr[1] "%(counter)s days"
+
+#, python-format
+msgid "%(counter)s avis"
+msgid_plural "%(counter)s avis"
+msgstr[0] "%(counter)s review"
+msgstr[1] "%(counter)s reviews"
+
+msgid "par personne"
+msgstr "per person"
+
+msgid "Voir"
+msgstr "View"
+
+msgid "Notre histoire"
+msgstr "Our story"
+
+msgid "Nés dans le sable, guidés par le désert."
+msgstr "Born in the sand, guided by the desert."
+
+msgid ""
+"Morocco Riwa Tours est une agence locale fondée par des familles berbères de"
+" la région de l'Erg Chebbi. Depuis toujours, nous accompagnons les voyageurs"
+" dans le Sahara — pas comme des clients de passage, mais comme des invités."
+msgstr ""
+"Morocco Riwa Tours is a local agency founded by Berber families from the Erg"
+" Chebbi region. We have always guided travelers through the Sahara — not as "
+"passing customers, but as guests."
+
+msgid "Expertise locale"
+msgstr "Local expertise"
+
+msgid ""
+"Nos guides sont originaires de Merzouga et des environs : ils connaissent "
+"chaque dune, chaque piste, chaque famille nomade."
+msgstr ""
+"Our guides are from Merzouga and the surrounding area: they know every dune,"
+" every track, every nomadic family."
+
+msgid "Tourisme responsable"
+msgstr "Responsible tourism"
+
+msgid ""
+"Nous travaillons avec les communautés locales et limitons notre impact sur "
+"l'écosystème fragile de l'Erg Chebbi."
+msgstr ""
+"We work with local communities and limit our impact on the fragile Erg "
+"Chebbi ecosystem."
+
+msgid "Circuits sur mesure"
+msgstr "Tailor-made tours"
+
+msgid ""
+"Chaque groupe est différent : nous adaptons durée, confort et itinéraire à "
+"vos envies et à votre rythme."
+msgstr ""
+"Every group is different: we adapt duration, comfort and itinerary to your "
+"wishes and pace."
+
+msgid "Envie de nous rencontrer ?"
+msgstr "Want to meet us?"
+
+msgid ""
+"Parlons de votre voyage : dates, nombre de personnes, niveau de confort "
+"souhaité."
+msgstr ""
+"Let's talk about your trip: dates, number of people, desired comfort level."
+
+msgid "Nous contacter"
+msgstr "Contact us"
+
+msgid "Parlons de votre voyage"
+msgstr "Let's talk about your trip"
+
+msgid ""
+"Que ce soit pour une question, un devis personnalisé ou une réservation, "
+"notre équipe locale vous répond rapidement."
+msgstr ""
+"Whether it is a question, a personalized quote or a booking, our local team "
+"responds quickly."
+
+msgid "Aux portes de l'Erg Chebbi"
+msgstr "At the gates of the Erg Chebbi"
+
+msgid "Disponible tous les jours"
+msgstr "Available every day"
+
+msgid "Envoyer un message"
+msgstr "Send a message"
+
+msgid "Nom"
+msgstr "Name"
+
+msgid "Téléphone"
+msgstr "Phone"
+
+msgid "Circuit concerné"
+msgstr "Related tour"
+
+msgid "Envoyer"
+msgstr "Send"
+
+msgid "Merzouga · Porte du Sahara"
+msgstr "Merzouga · Gateway to the Sahara"
+
+msgid "Vivez le désert comme un nomade, pas comme un touriste."
+msgstr "Experience the desert like a nomad, not a tourist."
+
+msgid ""
+"Excursions dans les dunes de l'Erg Chebbi, nuits en campement berbère et "
+"circuits sur mesure, organisés par une agence locale qui connaît le Sahara "
+"depuis toujours."
+msgstr ""
+"Excursions in the dunes of the Erg Chebbi, nights in a Berber camp and "
+"tailor-made tours, organized by a local agency that has always known the "
+"Sahara."
+
+msgid "Voir nos circuits"
+msgstr "View our tours"
+
+msgid "Demander un devis"
+msgstr "Request a quote"
+
+msgid "voyageurs accompagnés"
+msgstr "travelers guided"
+
+msgid "note moyenne clients"
+msgstr "average customer rating"
+
+msgid "guides locaux berbères"
+msgstr "local Berber guides"
+
+msgid "Explorez par type d'expérience"
+msgstr "Explore by type of experience"
+
+msgid ""
+"Du safari d'une journée à l'escapade de plusieurs jours, chaque circuit est "
+"pensé pour une ambiance différente du désert."
+msgstr ""
+"From a one-day safari to a multi-day getaway, each tour is designed for a "
+"different desert atmosphere."
+
+msgid ""
+"Ajoutez des catégories depuis l'admin pour les afficher ici (ex. Excursions "
+"à la journée, Luxe, Lever de soleil...)."
+msgstr ""
+"Add categories from the admin to display them here (e.g. Day trips, Luxury, "
+"Sunrise...)."
+
+msgid "Nos circuits les plus demandés"
+msgstr "Our most popular tours"
+
+msgid "Sélectionnés pour leur popularité et les avis de nos voyageurs."
+msgstr "Selected for their popularity and our travelers' reviews."
+
+msgid "Voir tous les circuits"
+msgstr "View all tours"
+
+msgid ""
+"Aucun circuit publié pour l'instant. Ajoutez vos premiers circuits depuis "
+"l'admin Django"
+msgstr "No tours published yet. Add your first tours from the Django admin"
+
+msgid "Pourquoi voyager avec nous ?"
+msgstr "Why travel with us?"
+
+msgid "Guides berbères locaux"
+msgstr "Local Berber guides"
+
+msgid ""
+"Nos guides sont nés dans le désert et partagent leur culture, pas un simple "
+"discours touristique."
+msgstr ""
+"Our guides were born in the desert and share their culture, not just a "
+"tourist script."
+
+msgid "Campements authentiques"
+msgstr "Authentic camps"
+
+msgid ""
+"Nuits sous tente berbère, musique autour du feu et ciel étoilé du Sahara, "
+"loin des camps standardisés."
+msgstr ""
+"Nights under a Berber tent, music around the fire and the starry Sahara sky,"
+" far from standardized camps."
+
+msgid "Circuits flexibles"
+msgstr "Flexible tours"
+
+msgid ""
+"Départs privés ou en petit groupe, itinéraires adaptables depuis Marrakech, "
+"Fès ou directement Merzouga."
+msgstr ""
+"Private or small-group departures, itineraries adaptable from Marrakech, Fez"
+" or directly from Merzouga."
+
+msgid "Prêt à partir dans le Sahara ?"
+msgstr "Ready to head into the Sahara?"
+
+msgid "Dites-nous vos dates et vos envies, on s'occupe du reste."
+msgstr "Tell us your dates and wishes, we take care of the rest."
+
+msgid "Contactez-nous"
+msgstr "Contact us"
+
+msgid "Durée"
+msgstr "Duration"
+
+msgid "Départ"
+msgstr "Departure"
+
+msgid "pers."
+msgstr "people"
+
+msgid "Groupe max"
+msgstr "Max group"
+
+msgid "Difficulté"
+msgstr "Difficulty"
+
+msgid "Description"
+msgstr "Description"
+
+msgid "Temps forts"
+msgstr "Highlights"
+
+msgid "Galerie"
+msgstr "Gallery"
+
+msgid "Avis des voyageurs"
+msgstr "Traveler reviews"
+
+msgid "option privée disponible"
+msgstr "private option available"
+
+msgid "Demander à réserver"
+msgstr "Request to book"
+
+msgid "Circuits similaires"
+msgstr "Similar tours"
+
+msgid "Nos circuits & excursions"
+msgstr "Our tours & excursions"
+
+msgid ""
+"Filtrez par type d'expérience ou recherchez directement le circuit qui vous "
+"fait rêver."
+msgstr ""
+"Filter by type of experience or search directly for the tour you are "
+"dreaming of."
+
+msgid "Rechercher un circuit..."
+msgstr "Search for a tour..."
+
+msgid "Toutes les catégories"
+msgstr "All categories"
+
+msgid "Toute durée"
+msgstr "Any duration"
+
+msgid "1 jour"
+msgstr "1 day"
+
+msgid "2-3 jours"
+msgstr "2-3 days"
+
+msgid "4 jours et +"
+msgstr "4+ days"
+
+msgid "Filtrer"
+msgstr "Filter"
+
+msgid "Aucun circuit ne correspond à votre recherche pour l'instant."
+msgstr "No tour matches your search right now."
+
+msgid "Votre nom"
+msgstr "Your name"
+
+msgid "Votre email"
+msgstr "Your email"
+
+msgid "Téléphone (optionnel)"
+msgstr "Phone (optional)"
+
+msgid "Votre message"
+msgstr "Your message"
+
+msgid "Circuit concerné (optionnel)"
+msgstr "Related tour (optional)"
+
+msgid "Dites-nous en plus : dates souhaitées, nombre de personnes..."
+msgstr "Tell us more: desired dates, number of people..."
+
+msgid "Facile"
+msgstr "Easy"
+
+msgid "Modéré"
+msgstr "Moderate"
+
+msgid "Difficile"
+msgstr "Difficult"
+
+msgid "Votre demande a bien été envoyée. Nous vous répondrons rapidement."
+msgstr "Your request has been sent. We will get back to you shortly."
+
+msgid ""
+"Merci ! Votre message a bien été envoyé, nous vous répondrons rapidement."
+msgstr ""
+"Thank you! Your message has been sent, we will get back to you shortly."
+
+msgid ""
+"Votre demande de réservation a bien été envoyée. Nous vous confirmons "
+"rapidement."
+msgstr "Your booking request has been sent. We will confirm shortly."
+
+msgid "La date doit être dans le futur."
+msgstr "The date must be in the future."
+
+msgid "Au moins un adulte."
+msgstr "At least one adult."
+
+msgid "Le groupe dépasse la taille maximale de ce circuit (%(n)s personnes)."
+msgstr "The group exceeds this tour's maximum size (%(n)s people)."
+
+msgid "Une demande particulière ?"
+msgstr "Any special request?"
+
+msgid "Date souhaitée"
+msgstr "Preferred date"
+
+msgid "Adultes"
+msgstr "Adults"
+
+msgid "Enfants"
+msgstr "Children"
+
+msgid "Circuit privé"
+msgstr "Private tour"
+
+msgid "Remarques"
+msgstr "Notes"
+
+msgid "Total estimé"
+msgstr "Estimated total"
+
+msgid "Menu principal"
+msgstr "Main menu"
+
+msgid "Ouvrir le menu"
+msgstr "Open menu"
+
+msgid "Fermer le menu"
+msgstr "Close menu"
+
+msgid "Aller au contenu"
+msgstr "Skip to content"
+
+msgid "Réserver ce circuit"
+msgstr "Book this tour"
+
+msgid "Nos circuits seront bientôt disponibles."
+msgstr "Our tours will be available soon."
+
+msgid ""
+"Découvrez nos circuits et excursions dans le désert de Merzouga : dunes de "
+"l'Erg Chebbi, nuits en campement berbère, balades à dos de chameau."
+msgstr ""
+"Discover our tours and excursions in the Merzouga desert: Erg Chebbi dunes, "
+"nights in a Berber camp and camel rides."
+
+msgid ""
+"Morocco Riwa Tours est une agence locale fondée par des familles berbères de"
+" l'Erg Chebbi. Rencontrez notre équipe et découvrez notre approche du "
+"tourisme responsable."
+msgstr ""
+"Morocco Riwa Tours is a local agency founded by Berber families from Erg "
+"Chebbi. Meet our team and learn about our approach to responsible tourism."
+
+msgid ""
+"Contactez Morocco Riwa Tours pour un devis, une question ou une réservation "
+"d'excursion dans le Sahara. Réponse rapide de notre équipe locale."
+msgstr ""
+"Contact Morocco Riwa Tours for a quote, a question or to book a Sahara "
+"excursion. Our local team replies quickly."
+
+msgid "Page introuvable"
+msgstr "Page not found"
+
+msgid "Cette page n'existe pas ou a été déplacée."
+msgstr "This page does not exist or has been moved."
+
+msgid "Retour à l'accueil"
+msgstr "Back to home"
+
+msgid "Confirmez votre réservation"
+msgstr "Confirm your reservation"
+
+msgid "Retour aux circuits"
+msgstr "Back to tours"
+
+msgid "Réservation confirmée"
+msgstr "Reservation confirmed"
+
+msgid "Circuit"
+msgstr "Tour"
+
+msgid "Voyageurs"
+msgstr "Travellers"
+
+msgid "Réservation confirmée par notre équipe"
+msgstr "Reservation confirmed by our team"
+
+msgid "Votre réservation est confirmée"
+msgstr "Your reservation is confirmed"
+
+msgid "Merci ! Nous vous contactons sur WhatsApp pour les derniers détails."
+msgstr "Thank you! We will contact you on WhatsApp for the final details."
+
+msgid "Réservation annulée"
+msgstr "Reservation cancelled"
+
+msgid "Cette réservation est annulée"
+msgstr "This reservation is cancelled"
+
+msgid "Contactez-nous si vous pensez qu'il s'agit d'une erreur."
+msgstr "Contact us if you think this is a mistake."
+
+msgid "En attente de votre message WhatsApp"
+msgstr "Waiting for your WhatsApp message"
+
+msgid "Dernière étape : confirmez sur WhatsApp"
+msgstr "Last step: confirm on WhatsApp"
+
+msgid ""
+"Votre demande est enregistrée. Elle sera validée dès que vous nous enverrez "
+"votre code de réservation sur WhatsApp."
+msgstr ""
+"Your request is saved. It will be validated as soon as you send us your "
+"reservation code on WhatsApp."
+
+msgid "Votre code de réservation"
+msgstr "Your reservation code"
+
+msgid "Copier le code"
+msgstr "Copy code"
+
+msgid "Code copié !"
+msgstr "Code copied!"
+
+msgid "Appuyez sur le bouton vert ci-dessous."
+msgstr "Tap the green button below."
+
+msgid "WhatsApp s'ouvre avec votre message déjà écrit."
+msgstr "WhatsApp opens with your message already written."
+
+msgid "Envoyez-le : nous confirmons votre réservation."
+msgstr "Send it: we confirm your reservation."
+
+msgid "Confirmer sur WhatsApp"
+msgstr "Confirm on WhatsApp"
+
+msgid ""
+"Le bouton ne s'ouvre pas ? Envoyez votre code à %(number)s sur WhatsApp."
+msgstr "Button not opening? Send your code to %(number)s on WhatsApp."
+
+msgid "Envoyez votre code de réservation à notre équipe pour confirmer."
+msgstr "Send your reservation code to our team to confirm."
+
+msgid ""
+"Gardez cette page : vous pouvez y revenir pour voir si votre réservation est"
+" confirmée."
+msgstr ""
+"Keep this page: you can come back to see whether your reservation is "
+"confirmed."
+
+msgid "Bonjour %(site)s ! Je souhaite confirmer ma réservation."
+msgstr "Hello %(site)s! I would like to confirm my reservation."
+
+msgid "Référence"
+msgstr "Reference"
+
+msgid "(s'ouvre dans un nouvel onglet)"
+msgstr "(opens in a new tab)"

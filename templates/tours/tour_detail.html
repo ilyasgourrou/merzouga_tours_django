@@ -1,0 +1,139 @@
+{% extends "base.html" %}
+{% load i18n l10n seo_tags %}
+{% block title %}{{ tour.title }} — {{ site.name }}{% endblock %}
+{% block meta_description %}{{ tour.short_description }}{% endblock %}
+{% block og_title %}{{ tour.title }}{% endblock %}
+{% block og_description %}{{ tour.short_description }}{% endblock %}
+{% block og_image %}{% if tour.cover_image %}<meta property="og:image" content="{% absolute_url tour.cover_image.url %}">{% else %}{{ block.super }}{% endif %}{% endblock %}
+{% block structured_data %}{% jsonld_tour tour %}{% endblock %}
+{% block content %}
+
+<section class="section" style="padding-bottom:0;">
+  <div class="container">
+    <div class="detail-hero">
+      {% if tour.cover_image %}<img src="{{ tour.cover_image.url }}" alt="{{ tour.title }}" fetchpriority="high">{% endif %}
+    </div>
+
+    <div class="detail-grid">
+      <div>
+        <span class="tour-card__cats">
+          {% for cat in tour.categories.all %}{{ cat.name }}{% if not forloop.last %} · {% endif %}{% endfor %}
+        </span>
+        <h1>{{ tour.title }}</h1>
+        <a href="#reservation" class="btn btn-primary detail-jump"><i class="fa-solid fa-calendar-check" aria-hidden="true"></i>{% trans "Réserver ce circuit" %}</a>
+
+        <div class="detail-meta">
+          <div class="detail-meta__item"><strong><i class="fa-solid fa-clock" aria-hidden="true"></i>{% blocktrans count counter=tour.duration_days %}{{ counter }} jour{% plural %}{{ counter }} jours{% endblocktrans %}</strong>{% trans "Durée" %}</div>
+          <div class="detail-meta__item"><strong><i class="fa-solid fa-location-dot" aria-hidden="true"></i>{{ tour.departure_city }}</strong>{% trans "Départ" %}</div>
+          <div class="detail-meta__item"><strong><i class="fa-solid fa-users" aria-hidden="true"></i>{{ tour.max_group_size }} {% trans "pers." %}</strong>{% trans "Groupe max" %}</div>
+          <div class="detail-meta__item"><strong><i class="fa-solid fa-gauge" aria-hidden="true"></i>{{ tour.get_difficulty_display }}</strong>{% trans "Difficulté" %}</div>
+          {% if tour.average_rating %}
+            <div class="detail-meta__item"><strong><i class="fa-solid fa-star" aria-hidden="true"></i>{{ tour.average_rating }}</strong>{% blocktrans count counter=tour.review_count %}{{ counter }} avis{% plural %}{{ counter }} avis{% endblocktrans %}</div>
+          {% endif %}
+        </div>
+
+        <h3>{% trans "Description" %}</h3>
+        <p style="color:var(--charcoal-600);">{{ tour.description|linebreaks }}</p>
+
+        {% if tour.highlight_list %}
+          <h3 style="margin-top:32px;">{% trans "Temps forts" %}</h3>
+          <div class="trail" style="margin-top:20px;">
+            {% for point in tour.highlight_list %}
+              <div class="trail__item">{{ point }}</div>
+            {% endfor %}
+          </div>
+        {% endif %}
+
+        {% if tour.gallery_images.all %}
+          <h3 style="margin-top:32px;">{% trans "Galerie" %}</h3>
+          <div class="gallery-grid">
+            {% for img in tour.gallery_images.all %}
+              <img src="{{ img.image.url }}" alt="{{ img.caption }}" loading="lazy">
+            {% endfor %}
+          </div>
+        {% endif %}
+
+        {% if tour.reviews.all %}
+          <h3 style="margin-top:32px;">{% trans "Avis des voyageurs" %}</h3>
+          {% for review in tour.reviews.all %}
+            {% if review.is_approved %}
+              <div class="review">
+                <div class="review__head">
+                  <strong style="color:var(--charcoal-900);">{{ review.author_name }}</strong>
+                  <span><i class="fa-solid fa-star review__star" aria-hidden="true"></i> {{ review.rating }}/5 · {{ review.created_at|date:"d/m/Y" }}</span>
+                </div>
+                <p style="margin:6px 0 0;">{{ review.comment }}</p>
+              </div>
+            {% endif %}
+          {% endfor %}
+        {% endif %}
+      </div>
+
+      <div class="booking-card" id="reservation">
+        <div class="booking-card__price">
+          {% if tour.discount_price %}
+            <span class="old" style="font-size:1rem;">{{ tour.price }} MAD</span><br>{{ tour.discount_price }}
+          {% else %}
+            {{ tour.price }}
+          {% endif %} MAD
+        </div>
+        <p style="color:var(--charcoal-600); font-size:0.85rem; margin-top:-6px;">{% trans "par personne" %}{% if tour.private_option %} · {% trans "option privée disponible" %}{% endif %}</p>
+
+        <form method="post" style="margin-top:18px;" id="reservation-form" data-unit="{% if tour.discount_price %}{{ tour.discount_price|unlocalize }}{% else %}{{ tour.price|unlocalize }}{% endif %}">
+          {% csrf_token %}
+          {% if form.non_field_errors %}<div class="alert" style="background:#fdecea;color:#a93226;">{{ form.non_field_errors.0 }}</div>{% endif %}
+          <label for="{{ form.full_name.id_for_label }}">{% trans "Nom" %}</label>
+          {{ form.full_name }}{% for e in form.full_name.errors %}<p class="form-error">{{ e }}</p>{% endfor %}
+          <label for="{{ form.email.id_for_label }}">Email</label>
+          {{ form.email }}{% for e in form.email.errors %}<p class="form-error">{{ e }}</p>{% endfor %}
+          <label for="{{ form.phone.id_for_label }}">{% trans "Téléphone" %}</label>
+          {{ form.phone }}
+          <label for="{{ form.travel_date.id_for_label }}">{% trans "Date souhaitée" %}</label>
+          {{ form.travel_date }}{% for e in form.travel_date.errors %}<p class="form-error">{{ e }}</p>{% endfor %}
+          <div class="form-row">
+            <div>
+              <label for="{{ form.adults.id_for_label }}">{% trans "Adultes" %}</label>
+              {{ form.adults }}{% for e in form.adults.errors %}<p class="form-error">{{ e }}</p>{% endfor %}
+            </div>
+            <div>
+              <label for="{{ form.children.id_for_label }}">{% trans "Enfants" %}</label>
+              {{ form.children }}
+            </div>
+          </div>
+          {% if form.is_private %}
+            <label class="form-check">{{ form.is_private }} {% trans "Circuit privé" %}</label>
+          {% endif %}
+          <label for="{{ form.notes.id_for_label }}">{% trans "Remarques" %}</label>
+          {{ form.notes }}
+          <div class="hp-field" aria-hidden="true"><label for="{{ form.website.id_for_label }}">Website</label>{{ form.website }}</div>
+          <p class="booking-card__total">{% trans "Total estimé" %} : <strong id="reservation-total">—</strong></p>
+          <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center; margin-top:12px;">{% trans "Demander à réserver" %}</button>
+        </form>
+        <script>
+          (function () {
+            var f = document.getElementById('reservation-form');
+            if (!f) return;
+            var unit = parseFloat(f.dataset.unit), adults = f.querySelector('[name=adults]'), out = document.getElementById('reservation-total');
+            function upd() { var n = parseInt(adults.value, 10) || 0; out.textContent = n > 0 ? (n * unit).toLocaleString() + ' MAD' : '—'; }
+            adults.addEventListener('input', upd); upd();
+          })();
+        </script>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% if related_tours %}
+<section class="section section--alt">
+  <div class="container">
+    <h2>{% trans "Circuits similaires" %}</h2>
+    <div class="tour-grid" style="margin-top:24px;">
+      {% for tour in related_tours %}
+        {% include "tours/_tour_card.html" %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+{% endblock %}

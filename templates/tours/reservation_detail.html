@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{% trans "Confirmez votre réservation" %} — {{ site.name }}{% endblock %}
+{% block seo_links %}<meta name="robots" content="noindex,nofollow">{% endblock %}
+{% block content %}
+<section class="section">
+  <div class="container confirm-wrap">
+    <div class="confirm-card">
+
+      {% if reservation.status == "confirmed" %}
+        <span class="confirm-icon confirm-icon--ok" aria-hidden="true"><i class="fa-solid fa-circle-check"></i></span>
+        <p class="status-chip status-chip--ok"><i class="fa-solid fa-circle-check" aria-hidden="true"></i>{% trans "Réservation confirmée par notre équipe" %}</p>
+        <h1>{% trans "Votre réservation est confirmée" %}</h1>
+        <p>{% trans "Merci ! Nous vous contactons sur WhatsApp pour les derniers détails." %}</p>
+
+      {% elif reservation.status == "cancelled" %}
+        <span class="confirm-icon confirm-icon--warn" aria-hidden="true"><i class="fa-solid fa-triangle-exclamation"></i></span>
+        <p class="status-chip status-chip--warn">{% trans "Réservation annulée" %}</p>
+        <h1>{% trans "Cette réservation est annulée" %}</h1>
+        <p>{% trans "Contactez-nous si vous pensez qu'il s'agit d'une erreur." %}</p>
+
+      {% else %}
+        <span class="confirm-icon confirm-icon--wa" aria-hidden="true"><i class="fa-brands fa-whatsapp"></i></span>
+        <p class="status-chip"><i class="fa-solid fa-hourglass-half" aria-hidden="true"></i>{% trans "En attente de votre message WhatsApp" %}</p>
+        <h1>{% trans "Dernière étape : confirmez sur WhatsApp" %}</h1>
+        <p>{% trans "Votre demande est enregistrée. Elle sera validée dès que vous nous enverrez votre code de réservation sur WhatsApp." %}</p>
+      {% endif %}
+
+      <div class="reference-box">
+        <span class="reference-box__label">{% trans "Votre code de réservation" %}</span>
+        <strong class="reference-box__code" id="reservation-ref">{{ reservation.reference }}</strong>
+        <button type="button" class="reference-box__copy" data-copy-target="reservation-ref"
+                data-label-copy="{% trans 'Copier le code' %}" data-label-done="{% trans 'Code copié !' %}">
+          <i class="fa-solid fa-copy" aria-hidden="true"></i><span>{% trans "Copier le code" %}</span>
+        </button>
+      </div>
+
+      {% include "tours/_reservation_summary.html" %}
+
+      {% if reservation.status == "pending" %}
+        {% if whatsapp_ready %}
+          <ol class="confirm-steps">
+            <li>{% trans "Appuyez sur le bouton vert ci-dessous." %}</li>
+            <li>{% trans "WhatsApp s'ouvre avec votre message déjà écrit." %}</li>
+            <li>{% trans "Envoyez-le : nous confirmons votre réservation." %}</li>
+          </ol>
+          <a href="{% url 'tours:reservation_whatsapp' reservation.reference %}" class="btn btn-whatsapp" target="_blank" rel="noopener">
+            <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>{% trans "Confirmer sur WhatsApp" %}
+          </a>
+          <p class="confirm-help">{% blocktrans with number=site.whatsapp_display %}Le bouton ne s'ouvre pas ? Envoyez votre code à {{ number }} sur WhatsApp.{% endblocktrans %}</p>
+        {% else %}
+          <p class="confirm-help">{% trans "Envoyez votre code de réservation à notre équipe pour confirmer." %}</p>
+        {% endif %}
+        <p class="confirm-help">{% trans "Gardez cette page : vous pouvez y revenir pour voir si votre réservation est confirmée." %}</p>
+      {% endif %}
+
+      <a href="{% url 'tours:tour_list' %}" class="confirm-back">{% trans "Retour aux circuits" %}</a>
+    </div>
+  </div>
+</section>
+{% endblock %}

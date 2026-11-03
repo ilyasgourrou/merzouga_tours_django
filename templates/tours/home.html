@@ -1,0 +1,96 @@
+{% extends "base.html" %}
+{% load static i18n seo_tags %}
+{% block structured_data %}{% jsonld_agency %}{% endblock %}
+{% block content %}
+
+<section class="hero">
+  <div class="container hero__inner">
+    <span class="hero__eyebrow">{% trans "Merzouga · Porte du Sahara" %}</span>
+    <h1>{% trans "Vivez le désert comme un nomade, pas comme un touriste." %}</h1>
+    <p>{% trans "Excursions dans les dunes de l'Erg Chebbi, nuits en campement berbère et circuits sur mesure, organisés par une agence locale qui connaît le Sahara depuis toujours." %}</p>
+    <div class="hero__actions">
+      <a href="{% url 'tours:tour_list' %}" class="btn btn-primary">{% trans "Voir nos circuits" %}</a>
+      <a href="{% url 'tours:contact' %}" class="btn btn-ghost" style="border-color:#fff; color:#fff;">{% trans "Demander un devis" %}</a>
+    </div>
+    <div class="hero__stats">
+      <div class="hero__stat"><strong>500+</strong><span>{% trans "voyageurs accompagnés" %}</span></div>
+      <div class="hero__stat"><strong>4.8/5</strong><span>{% trans "note moyenne clients" %}</span></div>
+      <div class="hero__stat"><strong>100%</strong><span>{% trans "guides locaux berbères" %}</span></div>
+    </div>
+  </div>
+  <svg class="dune-divider" viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0,40 C240,90 480,0 720,30 C960,60 1200,10 1440,45 L1440,80 L0,80 Z" fill="#FAF3E4"/>
+  </svg>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section__head">
+      <div>
+        <h2>{% trans "Explorez par type d'expérience" %}</h2>
+        <p>{% trans "Du safari d'une journée à l'escapade de plusieurs jours, chaque circuit est pensé pour une ambiance différente du désert." %}</p>
+      </div>
+    </div>
+    {% if categories %}
+    <div class="chip-row">
+      {% for category in categories %}
+        <a href="{% url 'tours:tour_list' %}?category={{ category.slug }}" class="chip">{% if category.icon_classes %}<i class="{{ category.icon_classes }}" aria-hidden="true"></i>{% endif %}{{ category.name }}</a>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="container">
+    <div class="section__head">
+      <div>
+        <h2>{% trans "Nos circuits les plus demandés" %}</h2>
+        <p>{% trans "Sélectionnés pour leur popularité et les avis de nos voyageurs." %}</p>
+      </div>
+      <a href="{% url 'tours:tour_list' %}" class="btn btn-ghost">{% trans "Voir tous les circuits" %}</a>
+    </div>
+
+    {% if featured_tours %}
+      <div class="tour-grid">
+        {% for tour in featured_tours %}
+          {% include "tours/_tour_card.html" %}
+        {% endfor %}
+      </div>
+    {% else %}
+      <p style="color:var(--charcoal-600);">{% trans "Nos circuits seront bientôt disponibles." %}</p>
+    {% endif %}
+  </div>
+</section>
+
+<section class="section">
+  <div class="container detail-grid" style="align-items:center;">
+    <div>
+      <h2>{% trans "Pourquoi voyager avec nous ?" %}</h2>
+      <div class="trail" style="margin-top:28px;">
+        <div class="trail__item">
+          <h3 style="font-size:1.05rem;">{% trans "Guides berbères locaux" %}</h3>
+          <p style="color:var(--charcoal-600); margin:4px 0 0;">{% trans "Nos guides sont nés dans le désert et partagent leur culture, pas un simple discours touristique." %}</p>
+        </div>
+        <div class="trail__item">
+          <h3 style="font-size:1.05rem;">{% trans "Campements authentiques" %}</h3>
+          <p style="color:var(--charcoal-600); margin:4px 0 0;">{% trans "Nuits sous tente berbère, musique autour du feu et ciel étoilé du Sahara, loin des camps standardisés." %}</p>
+        </div>
+        <div class="trail__item">
+          <h3 style="font-size:1.05rem;">{% trans "Circuits flexibles" %}</h3>
+          <p style="color:var(--charcoal-600); margin:4px 0 0;">{% trans "Départs privés ou en petit groupe, itinéraires adaptables depuis Marrakech, Fès ou directement Merzouga." %}</p>
+        </div>
+      </div>
+    </div>
+    <div class="value-grid" style="grid-template-columns:1fr;">
+      <div class="value-card">
+        <span class="value-card__icon" aria-hidden="true"><i class="fa-solid fa-campground"></i></span>
+        <h3 style="font-size:1rem;">{% trans "Prêt à partir dans le Sahara ?" %}</h3>
+        <p style="color:var(--charcoal-600); font-size:0.9rem;">{% trans "Dites-nous vos dates et vos envies, on s'occupe du reste." %}</p>
+        <a href="{% url 'tours:contact' %}" class="btn btn-primary" style="margin-top:12px;">{% trans "Contactez-nous" %}</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

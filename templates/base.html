@@ -1,0 +1,106 @@
+{% load static i18n seo_tags %}
+<!DOCTYPE html>
+<html lang="{{ LANGUAGE_CODE }}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}{% trans "Morocco Riwa Tours — Excursions & circuits authentiques dans le Sahara" %}{% endblock %}</title>
+  <meta name="description" content="{% block meta_description %}{% trans "Agence locale à Merzouga : excursions dans le désert, nuits en campement berbère, balades à dos de chameau et circuits sur mesure au Maroc." %}{% endblock %}">
+  <link rel="icon" href="{% static 'favicon.ico' %}" sizes="any">
+  <link rel="icon" type="image/png" sizes="192x192" href="{% static 'img/favicon-192.png' %}">
+  <link rel="apple-touch-icon" href="{% static 'img/apple-touch-icon.png' %}">
+  <meta name="theme-color" content="#FAF3E4">
+  {% block seo_links %}{% seo_links %}{% endblock %}
+  <meta property="og:site_name" content="{{ site.name }}">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{% block og_title %}{{ site.name }}{% endblock %}">
+  <meta property="og:description" content="{% block og_description %}{% trans "Agence locale à Merzouga : excursions dans le désert, nuits en campement berbère, balades à dos de chameau et circuits sur mesure au Maroc." %}{% endblock %}">
+  {% block og_image %}{% static 'img/og-default.png' as og_default %}<meta property="og:image" content="{% absolute_url og_default %}">
+  <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">{% endblock %}
+  <meta name="twitter:card" content="summary_large_image">
+  {% block structured_data %}{% endblock %}
+  <link rel="preload" href="{% static 'vendor/fontawesome/webfonts/fa-solid-900.woff2' %}" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="{% static 'vendor/fontawesome/css/fontawesome.min.css' %}">
+  <link rel="stylesheet" href="{% static 'vendor/fontawesome/css/solid.min.css' %}">
+  <link rel="stylesheet" href="{% static 'vendor/fontawesome/css/brands.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+  <a class="skip-link" href="#main">{% trans "Aller au contenu" %}</a>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a href="{% url 'tours:home' %}" class="brand">
+        <img src="{% static 'img/logo-mark.png' %}" alt="" width="75" height="44">
+        <span>{{ site.name }}</span>
+      </a>
+
+      <nav id="site-nav" class="nav" aria-label="{% trans 'Menu principal' %}">
+        <a href="{% url 'tours:home' %}" class="{% if request.resolver_match.url_name == 'home' %}active{% endif %}"{% if request.resolver_match.url_name == 'home' %} aria-current="page"{% endif %}>{% trans "Accueil" %}</a>
+        <a href="{% url 'tours:tour_list' %}" class="{% if request.resolver_match.url_name == 'tour_list' %}active{% endif %}"{% if request.resolver_match.url_name == 'tour_list' %} aria-current="page"{% endif %}>{% trans "Circuits" %}</a>
+        <a href="{% url 'tours:about' %}" class="{% if request.resolver_match.url_name == 'about' %}active{% endif %}"{% if request.resolver_match.url_name == 'about' %} aria-current="page"{% endif %}>{% trans "À propos" %}</a>
+        <a href="{% url 'tours:contact' %}" class="{% if request.resolver_match.url_name == 'contact' %}active{% endif %}"{% if request.resolver_match.url_name == 'contact' %} aria-current="page"{% endif %}>{% trans "Contact" %}</a>
+        {# Sur petit écran (< 640 px), langue et bouton Réserver passent dans le menu #}
+        <div class="nav__extra">
+          {% include "includes/lang_switch.html" with variant="lang-switch--panel" %}
+          <a href="{% url 'tours:contact' %}" class="btn btn-primary">{% trans "Réserver" %}</a>
+        </div>
+      </nav>
+
+      <div class="site-header__actions">
+        {% include "includes/lang_switch.html" with variant="lang-switch--header" %}
+        <a href="{% url 'tours:contact' %}" class="btn btn-primary header-cta">{% trans "Réserver" %}</a>
+        <button type="button" class="nav-toggle" aria-controls="site-nav" aria-expanded="false"
+                aria-label="{% trans 'Ouvrir le menu' %}"
+                data-label-open="{% trans 'Ouvrir le menu' %}" data-label-close="{% trans 'Fermer le menu' %}">
+          <i class="fa-solid fa-bars" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    {% if messages %}
+      <div class="container" style="padding-top:24px;">
+        {% for message in messages %}
+          <div class="alert alert-{{ message.tags|default:'info' }}" role="{% if message.level >= 40 %}alert{% else %}status{% endif %}">{{ message }}</div>
+        {% endfor %}
+      </div>
+    {% endif %}
+
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4>{{ site.name }}</h4>
+          <p class="footer-tagline">{{ site.tagline }}</p>
+          <p style="max-width:340px; font-size:0.9rem;">{% trans "Agence locale basée à Merzouga, aux portes de l'Erg Chebbi. Nous organisons des excursions authentiques dans le Sahara marocain depuis des années, avec des guides berbères passionnés." %}</p>
+        </div>
+        <div>
+          <h4>{% trans "Navigation" %}</h4>
+          <a href="{% url 'tours:home' %}">{% trans "Accueil" %}</a>
+          <a href="{% url 'tours:tour_list' %}">{% trans "Nos circuits" %}</a>
+          <a href="{% url 'tours:about' %}">{% trans "À propos" %}</a>
+          <a href="{% url 'tours:contact' %}">{% trans "Contact" %}</a>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <a href="tel:{{ site.phone_tel }}"><i class="fa-solid fa-phone fa-fw" aria-hidden="true"></i>{{ site.phone }}</a>
+          <a href="mailto:{{ site.email }}"><i class="fa-solid fa-envelope fa-fw" aria-hidden="true"></i>{{ site.email }}</a>
+          <a href="{{ site.maps_url }}" target="_blank" rel="noopener"><i class="fa-solid fa-location-dot fa-fw" aria-hidden="true"></i>{% trans "Merzouga, Maroc" %}<span class="sr-only"> {% trans "(s'ouvre dans un nouvel onglet)" %}</span></a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© {% now "Y" %} {{ site.name }}. {% trans "Tous droits réservés." %}</span>
+        <span>{% trans "Conçu à Merzouga, porte du Sahara." %}</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="{% static 'js/main.js' %}" defer></script>
+</body>
+</html>

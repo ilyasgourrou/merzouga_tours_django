@@ -1,0 +1,7 @@
+{% load i18n %}
+<dl class="summary-list">
+  <div><dt>{% trans "Circuit" %}</dt><dd>{{ reservation.tour.title }}</dd></div>
+  <div><dt>{% trans "Date souhaitée" %}</dt><dd>{{ reservation.travel_date|date:"DATE_FORMAT" }}</dd></div>
+  <div><dt>{% trans "Voyageurs" %}</dt><dd>{% trans "Adultes" %} : {{ reservation.adults }}{% if reservation.children %}, {% trans "Enfants" %} : {{ reservation.children }}{% endif %}</dd></div>
+  <div><dt>{% trans "Total estimé" %}</dt><dd>{{ reservation.total_price|floatformat:0 }} MAD</dd></div>
+</dl>

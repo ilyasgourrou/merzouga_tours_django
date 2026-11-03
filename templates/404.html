@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{% trans "Page introuvable" %} — {{ site.name }}{% endblock %}
+{% block seo_links %}<meta name="robots" content="noindex">{% endblock %}
+{% block content %}
+<section class="section">
+  <div class="container" style="max-width:560px; text-align:center;">
+    <span class="value-card__icon" aria-hidden="true"><i class="fa-solid fa-compass"></i></span>
+    <h1>404</h1>
+    <p style="color:var(--charcoal-600);">{% trans "Cette page n'existe pas ou a été déplacée." %}</p>
+    <a href="{% url 'tours:home' %}" class="btn btn-primary" style="margin-top:12px;">{% trans "Retour à l'accueil" %}</a>
+  </div>
+</section>
+{% endblock %}

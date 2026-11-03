@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{% trans "Nos circuits" %} — {{ site.name }}{% endblock %}
+{% block meta_description %}{% trans "Découvrez nos circuits et excursions dans le désert de Merzouga : dunes de l'Erg Chebbi, nuits en campement berbère, balades à dos de chameau." %}{% endblock %}
+{% block content %}
+
+<section class="section" style="padding-bottom:0;">
+  <div class="container">
+    <h1>{% trans "Nos circuits & excursions" %}</h1>
+    <p style="color:var(--charcoal-600); max-width:600px;">{% trans "Filtrez par type d'expérience ou recherchez directement le circuit qui vous fait rêver." %}</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <form method="get" class="filters">
+      <input type="text" name="q" placeholder="{% trans "Rechercher un circuit..." %}" value="{{ query }}">
+      <select name="category">
+        <option value="">{% trans "Toutes les catégories" %}</option>
+        {% for category in categories %}
+          <option value="{{ category.slug }}" {% if category.slug == active_category %}selected{% endif %}>{{ category.name }}</option>
+        {% endfor %}
+      </select>
+      <select name="duration">
+        <option value="">{% trans "Toute durée" %}</option>
+        <option value="1" {% if request.GET.duration == "1" %}selected{% endif %}>{% trans "1 jour" %}</option>
+        <option value="2-3" {% if request.GET.duration == "2-3" %}selected{% endif %}>{% trans "2-3 jours" %}</option>
+        <option value="4+" {% if request.GET.duration == "4+" %}selected{% endif %}>{% trans "4 jours et +" %}</option>
+      </select>
+      <button type="submit" class="btn btn-primary">{% trans "Filtrer" %}</button>
+    </form>
+
+    {% if tours %}
+      <div class="tour-grid">
+        {% for tour in tours %}
+          {% include "tours/_tour_card.html" %}
+        {% endfor %}
+      </div>
+    {% else %}
+      <p style="color:var(--charcoal-600);">{% trans "Aucun circuit ne correspond à votre recherche pour l'instant." %}</p>
+    {% endif %}
+  </div>
+</section>
+
+{% endblock %}

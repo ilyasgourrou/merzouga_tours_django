@@ -1,0 +1,571 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-02 00:13+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
+
+msgid "Français"
+msgstr "Francés"
+
+msgid "English"
+msgstr "Inglés"
+
+msgid "Español"
+msgstr "Español"
+
+msgid "Morocco Riwa Tours — Excursions & circuits authentiques dans le Sahara"
+msgstr "Morocco Riwa Tours — Excursiones y circuitos auténticos en el Sahara"
+
+msgid ""
+"Agence locale à Merzouga : excursions dans le désert, nuits en campement "
+"berbère, balades à dos de chameau et circuits sur mesure au Maroc."
+msgstr ""
+"Agencia local en Merzouga: excursiones en el desierto, noches en campamento "
+"bereber, paseos en camello y circuitos a medida en Marruecos."
+
+msgid "Accueil"
+msgstr "Inicio"
+
+msgid "Circuits"
+msgstr "Circuitos"
+
+msgid "À propos"
+msgstr "Sobre nosotros"
+
+msgid "Contact"
+msgstr "Contacto"
+
+msgid "Langue"
+msgstr "Idioma"
+
+msgid "Réserver"
+msgstr "Reservar"
+
+msgid ""
+"Agence locale basée à Merzouga, aux portes de l'Erg Chebbi. Nous organisons "
+"des excursions authentiques dans le Sahara marocain depuis des années, avec "
+"des guides berbères passionnés."
+msgstr ""
+"Agencia local con sede en Merzouga, a las puertas del Erg Chebbi. Llevamos "
+"años organizando excursiones auténticas en el Sahara marroquí, con guías "
+"bereberes apasionados."
+
+msgid "Navigation"
+msgstr "Navegación"
+
+msgid "Nos circuits"
+msgstr "Nuestros circuitos"
+
+msgid "Merzouga, Maroc"
+msgstr "Merzouga, Marruecos"
+
+msgid "Tous droits réservés."
+msgstr "Todos los derechos reservados."
+
+msgid "Conçu à Merzouga, porte du Sahara."
+msgstr "Diseñado en Merzouga, puerta del Sahara."
+
+#, python-format
+msgid "%(counter)s jour"
+msgid_plural "%(counter)s jours"
+msgstr[0] "%(counter)s día"
+msgstr[1] "%(counter)s días"
+
+#, python-format
+msgid "%(counter)s avis"
+msgid_plural "%(counter)s avis"
+msgstr[0] "%(counter)s opinión"
+msgstr[1] "%(counter)s opiniones"
+
+msgid "par personne"
+msgstr "por persona"
+
+msgid "Voir"
+msgstr "Ver"
+
+msgid "Notre histoire"
+msgstr "Nuestra historia"
+
+msgid "Nés dans le sable, guidés par le désert."
+msgstr "Nacidos en la arena, guiados por el desierto."
+
+msgid ""
+"Morocco Riwa Tours est une agence locale fondée par des familles berbères de"
+" la région de l'Erg Chebbi. Depuis toujours, nous accompagnons les voyageurs"
+" dans le Sahara — pas comme des clients de passage, mais comme des invités."
+msgstr ""
+"Morocco Riwa Tours es una agencia local fundada por familias bereberes de la"
+" región del Erg Chebbi. Desde siempre acompañamos a los viajeros por el "
+"Sahara, no como clientes de paso, sino como invitados."
+
+msgid "Expertise locale"
+msgstr "Experiencia local"
+
+msgid ""
+"Nos guides sont originaires de Merzouga et des environs : ils connaissent "
+"chaque dune, chaque piste, chaque famille nomade."
+msgstr ""
+"Nuestros guías son originarios de Merzouga y sus alrededores: conocen cada "
+"duna, cada pista, cada familia nómada."
+
+msgid "Tourisme responsable"
+msgstr "Turismo responsable"
+
+msgid ""
+"Nous travaillons avec les communautés locales et limitons notre impact sur "
+"l'écosystème fragile de l'Erg Chebbi."
+msgstr ""
+"Trabajamos con las comunidades locales y limitamos nuestro impacto en el "
+"frágil ecosistema del Erg Chebbi."
+
+msgid "Circuits sur mesure"
+msgstr "Circuitos a medida"
+
+msgid ""
+"Chaque groupe est différent : nous adaptons durée, confort et itinéraire à "
+"vos envies et à votre rythme."
+msgstr ""
+"Cada grupo es diferente: adaptamos duración, confort e itinerario a sus "
+"deseos y su ritmo."
+
+msgid "Envie de nous rencontrer ?"
+msgstr "¿Quiere conocernos?"
+
+msgid ""
+"Parlons de votre voyage : dates, nombre de personnes, niveau de confort "
+"souhaité."
+msgstr ""
+"Hablemos de su viaje: fechas, número de personas, nivel de confort deseado."
+
+msgid "Nous contacter"
+msgstr "Contáctenos"
+
+msgid "Parlons de votre voyage"
+msgstr "Hablemos de su viaje"
+
+msgid ""
+"Que ce soit pour une question, un devis personnalisé ou une réservation, "
+"notre équipe locale vous répond rapidement."
+msgstr ""
+"Ya sea por una pregunta, un presupuesto personalizado o una reserva, nuestro"
+" equipo local le responde rápidamente."
+
+msgid "Aux portes de l'Erg Chebbi"
+msgstr "A las puertas del Erg Chebbi"
+
+msgid "Disponible tous les jours"
+msgstr "Disponible todos los días"
+
+msgid "Envoyer un message"
+msgstr "Enviar un mensaje"
+
+msgid "Nom"
+msgstr "Nombre"
+
+msgid "Téléphone"
+msgstr "Teléfono"
+
+msgid "Circuit concerné"
+msgstr "Circuito relacionado"
+
+msgid "Envoyer"
+msgstr "Enviar"
+
+msgid "Merzouga · Porte du Sahara"
+msgstr "Merzouga · Puerta del Sahara"
+
+msgid "Vivez le désert comme un nomade, pas comme un touriste."
+msgstr "Viva el desierto como un nómada, no como un turista."
+
+msgid ""
+"Excursions dans les dunes de l'Erg Chebbi, nuits en campement berbère et "
+"circuits sur mesure, organisés par une agence locale qui connaît le Sahara "
+"depuis toujours."
+msgstr ""
+"Excursiones por las dunas del Erg Chebbi, noches en campamento bereber y "
+"circuitos a medida, organizados por una agencia local que conoce el Sahara "
+"desde siempre."
+
+msgid "Voir nos circuits"
+msgstr "Ver nuestros circuitos"
+
+msgid "Demander un devis"
+msgstr "Solicitar presupuesto"
+
+msgid "voyageurs accompagnés"
+msgstr "viajeros acompañados"
+
+msgid "note moyenne clients"
+msgstr "valoración media de clientes"
+
+msgid "guides locaux berbères"
+msgstr "guías locales bereberes"
+
+msgid "Explorez par type d'expérience"
+msgstr "Explore por tipo de experiencia"
+
+msgid ""
+"Du safari d'une journée à l'escapade de plusieurs jours, chaque circuit est "
+"pensé pour une ambiance différente du désert."
+msgstr ""
+"Desde un safari de un día hasta una escapada de varios días, cada circuito "
+"está pensado para un ambiente diferente del desierto."
+
+msgid ""
+"Ajoutez des catégories depuis l'admin pour les afficher ici (ex. Excursions "
+"à la journée, Luxe, Lever de soleil...)."
+msgstr ""
+"Añada categorías desde el panel de administración para mostrarlas aquí (ej. "
+"Excursiones de un día, Lujo, Amanecer...)."
+
+msgid "Nos circuits les plus demandés"
+msgstr "Nuestros circuitos más solicitados"
+
+msgid "Sélectionnés pour leur popularité et les avis de nos voyageurs."
+msgstr ""
+"Seleccionados por su popularidad y las opiniones de nuestros viajeros."
+
+msgid "Voir tous les circuits"
+msgstr "Ver todos los circuitos"
+
+msgid ""
+"Aucun circuit publié pour l'instant. Ajoutez vos premiers circuits depuis "
+"l'admin Django"
+msgstr ""
+"Todavía no hay circuitos publicados. Añada sus primeros circuitos desde el "
+"panel de administración de Django"
+
+msgid "Pourquoi voyager avec nous ?"
+msgstr "¿Por qué viajar con nosotros?"
+
+msgid "Guides berbères locaux"
+msgstr "Guías bereberes locales"
+
+msgid ""
+"Nos guides sont nés dans le désert et partagent leur culture, pas un simple "
+"discours touristique."
+msgstr ""
+"Nuestros guías nacieron en el desierto y comparten su cultura, no un simple "
+"discurso turístico."
+
+msgid "Campements authentiques"
+msgstr "Campamentos auténticos"
+
+msgid ""
+"Nuits sous tente berbère, musique autour du feu et ciel étoilé du Sahara, "
+"loin des camps standardisés."
+msgstr ""
+"Noches bajo tienda bereber, música alrededor del fuego y cielo estrellado "
+"del Sahara, lejos de los campamentos estandarizados."
+
+msgid "Circuits flexibles"
+msgstr "Circuitos flexibles"
+
+msgid ""
+"Départs privés ou en petit groupe, itinéraires adaptables depuis Marrakech, "
+"Fès ou directement Merzouga."
+msgstr ""
+"Salidas privadas o en grupo reducido, itinerarios adaptables desde "
+"Marrakech, Fez o directamente desde Merzouga."
+
+msgid "Prêt à partir dans le Sahara ?"
+msgstr "¿Listo para partir al Sahara?"
+
+msgid "Dites-nous vos dates et vos envies, on s'occupe du reste."
+msgstr "Díganos sus fechas y deseos, nosotros nos ocupamos del resto."
+
+msgid "Contactez-nous"
+msgstr "Contáctenos"
+
+msgid "Durée"
+msgstr "Duración"
+
+msgid "Départ"
+msgstr "Salida"
+
+msgid "pers."
+msgstr "personas"
+
+msgid "Groupe max"
+msgstr "Grupo máx."
+
+msgid "Difficulté"
+msgstr "Dificultad"
+
+msgid "Description"
+msgstr "Descripción"
+
+msgid "Temps forts"
+msgstr "Puntos destacados"
+
+msgid "Galerie"
+msgstr "Galería"
+
+msgid "Avis des voyageurs"
+msgstr "Opiniones de viajeros"
+
+msgid "option privée disponible"
+msgstr "opción privada disponible"
+
+msgid "Demander à réserver"
+msgstr "Solicitar reserva"
+
+msgid "Circuits similaires"
+msgstr "Circuitos similares"
+
+msgid "Nos circuits & excursions"
+msgstr "Nuestros circuitos y excursiones"
+
+msgid ""
+"Filtrez par type d'expérience ou recherchez directement le circuit qui vous "
+"fait rêver."
+msgstr ""
+"Filtre por tipo de experiencia o busque directamente el circuito con el que "
+"sueña."
+
+msgid "Rechercher un circuit..."
+msgstr "Buscar un circuito..."
+
+msgid "Toutes les catégories"
+msgstr "Todas las categorías"
+
+msgid "Toute durée"
+msgstr "Cualquier duración"
+
+msgid "1 jour"
+msgstr "1 día"
+
+msgid "2-3 jours"
+msgstr "2-3 días"
+
+msgid "4 jours et +"
+msgstr "4 días o más"
+
+msgid "Filtrer"
+msgstr "Filtrar"
+
+msgid "Aucun circuit ne correspond à votre recherche pour l'instant."
+msgstr "Ningún circuito coincide con su búsqueda por el momento."
+
+msgid "Votre nom"
+msgstr "Su nombre"
+
+msgid "Votre email"
+msgstr "Su correo electrónico"
+
+msgid "Téléphone (optionnel)"
+msgstr "Teléfono (opcional)"
+
+msgid "Votre message"
+msgstr "Su mensaje"
+
+msgid "Circuit concerné (optionnel)"
+msgstr "Circuito relacionado (opcional)"
+
+msgid "Dites-nous en plus : dates souhaitées, nombre de personnes..."
+msgstr "Cuéntenos más: fechas deseadas, número de personas..."
+
+msgid "Facile"
+msgstr "Fácil"
+
+msgid "Modéré"
+msgstr "Moderado"
+
+msgid "Difficile"
+msgstr "Difícil"
+
+msgid "Votre demande a bien été envoyée. Nous vous répondrons rapidement."
+msgstr "Su solicitud ha sido enviada. Le responderemos en breve."
+
+msgid ""
+"Merci ! Votre message a bien été envoyé, nous vous répondrons rapidement."
+msgstr "¡Gracias! Su mensaje ha sido enviado, le responderemos en breve."
+
+msgid ""
+"Votre demande de réservation a bien été envoyée. Nous vous confirmons "
+"rapidement."
+msgstr "Su solicitud de reserva ha sido enviada. Se la confirmaremos pronto."
+
+msgid "La date doit être dans le futur."
+msgstr "La fecha debe ser futura."
+
+msgid "Au moins un adulte."
+msgstr "Al menos un adulto."
+
+msgid "Le groupe dépasse la taille maximale de ce circuit (%(n)s personnes)."
+msgstr "El grupo supera el tamaño máximo de este circuito (%(n)s personas)."
+
+msgid "Une demande particulière ?"
+msgstr "¿Alguna petición especial?"
+
+msgid "Date souhaitée"
+msgstr "Fecha deseada"
+
+msgid "Adultes"
+msgstr "Adultos"
+
+msgid "Enfants"
+msgstr "Niños"
+
+msgid "Circuit privé"
+msgstr "Circuito privado"
+
+msgid "Remarques"
+msgstr "Observaciones"
+
+msgid "Total estimé"
+msgstr "Total estimado"
+
+msgid "Menu principal"
+msgstr "Menú principal"
+
+msgid "Ouvrir le menu"
+msgstr "Abrir el menú"
+
+msgid "Fermer le menu"
+msgstr "Cerrar el menú"
+
+msgid "Aller au contenu"
+msgstr "Ir al contenido"
+
+msgid "Réserver ce circuit"
+msgstr "Reservar este circuito"
+
+msgid "Nos circuits seront bientôt disponibles."
+msgstr "Nuestros circuitos estarán disponibles pronto."
+
+msgid ""
+"Découvrez nos circuits et excursions dans le désert de Merzouga : dunes de "
+"l'Erg Chebbi, nuits en campement berbère, balades à dos de chameau."
+msgstr ""
+"Descubra nuestros circuitos y excursiones en el desierto de Merzouga: dunas "
+"del Erg Chebbi, noches en campamento bereber y paseos en camello."
+
+msgid ""
+"Morocco Riwa Tours est une agence locale fondée par des familles berbères de"
+" l'Erg Chebbi. Rencontrez notre équipe et découvrez notre approche du "
+"tourisme responsable."
+msgstr ""
+"Morocco Riwa Tours es una agencia local fundada por familias bereberes del "
+"Erg Chebbi. Conozca a nuestro equipo y nuestro enfoque del turismo "
+"responsable."
+
+msgid ""
+"Contactez Morocco Riwa Tours pour un devis, une question ou une réservation "
+"d'excursion dans le Sahara. Réponse rapide de notre équipe locale."
+msgstr ""
+"Contacte con Morocco Riwa Tours para un presupuesto, una consulta o para "
+"reservar una excursión en el Sáhara. Nuestro equipo local responde "
+"rápidamente."
+
+msgid "Page introuvable"
+msgstr "Página no encontrada"
+
+msgid "Cette page n'existe pas ou a été déplacée."
+msgstr "Esta página no existe o ha sido trasladada."
+
+msgid "Retour à l'accueil"
+msgstr "Volver al inicio"
+
+msgid "Confirmez votre réservation"
+msgstr "Confirme su reserva"
+
+msgid "Retour aux circuits"
+msgstr "Volver a los circuitos"
+
+msgid "Réservation confirmée"
+msgstr "Reserva confirmada"
+
+msgid "Circuit"
+msgstr "Circuito"
+
+msgid "Voyageurs"
+msgstr "Viajeros"
+
+msgid "Réservation confirmée par notre équipe"
+msgstr "Reserva confirmada por nuestro equipo"
+
+msgid "Votre réservation est confirmée"
+msgstr "Su reserva está confirmada"
+
+msgid "Merci ! Nous vous contactons sur WhatsApp pour les derniers détails."
+msgstr "¡Gracias! Le contactaremos por WhatsApp para los últimos detalles."
+
+msgid "Réservation annulée"
+msgstr "Reserva cancelada"
+
+msgid "Cette réservation est annulée"
+msgstr "Esta reserva está cancelada"
+
+msgid "Contactez-nous si vous pensez qu'il s'agit d'une erreur."
+msgstr "Contáctenos si cree que se trata de un error."
+
+msgid "En attente de votre message WhatsApp"
+msgstr "Esperando su mensaje de WhatsApp"
+
+msgid "Dernière étape : confirmez sur WhatsApp"
+msgstr "Último paso: confirme por WhatsApp"
+
+msgid ""
+"Votre demande est enregistrée. Elle sera validée dès que vous nous enverrez "
+"votre code de réservation sur WhatsApp."
+msgstr ""
+"Su solicitud está registrada. Se validará en cuanto nos envíe su código de "
+"reserva por WhatsApp."
+
+msgid "Votre code de réservation"
+msgstr "Su código de reserva"
+
+msgid "Copier le code"
+msgstr "Copiar código"
+
+msgid "Code copié !"
+msgstr "¡Código copiado!"
+
+msgid "Appuyez sur le bouton vert ci-dessous."
+msgstr "Pulse el botón verde de abajo."
+
+msgid "WhatsApp s'ouvre avec votre message déjà écrit."
+msgstr "WhatsApp se abre con su mensaje ya escrito."
+
+msgid "Envoyez-le : nous confirmons votre réservation."
+msgstr "Envíelo: confirmaremos su reserva."
+
+msgid "Confirmer sur WhatsApp"
+msgstr "Confirmar por WhatsApp"
+
+msgid ""
+"Le bouton ne s'ouvre pas ? Envoyez votre code à %(number)s sur WhatsApp."
+msgstr "¿No se abre el botón? Envíe su código al %(number)s por WhatsApp."
+
+msgid "Envoyez votre code de réservation à notre équipe pour confirmer."
+msgstr "Envíe su código de reserva a nuestro equipo para confirmar."
+
+msgid ""
+"Gardez cette page : vous pouvez y revenir pour voir si votre réservation est"
+" confirmée."
+msgstr ""
+"Guarde esta página: puede volver para ver si su reserva está confirmada."
+
+msgid "Bonjour %(site)s ! Je souhaite confirmer ma réservation."
+msgstr "¡Hola %(site)s! Quisiera confirmar mi reserva."
+
+msgid "Référence"
+msgstr "Referencia"
+
+msgid "(s'ouvre dans un nouvel onglet)"
+msgstr "(se abre en una pestaña nueva)"

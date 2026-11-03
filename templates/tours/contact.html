@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}Contact — {{ site.name }}{% endblock %}
+{% block meta_description %}{% trans "Contactez Morocco Riwa Tours pour un devis, une question ou une réservation d'excursion dans le Sahara. Réponse rapide de notre équipe locale." %}{% endblock %}
+{% block content %}
+
+<section class="section">
+  <div class="container detail-grid" style="align-items:start;">
+    <div>
+      <h1>{% trans "Parlons de votre voyage" %}</h1>
+      <p style="color:var(--charcoal-600); max-width:480px;">{% trans "Que ce soit pour une question, un devis personnalisé ou une réservation, notre équipe locale vous répond rapidement." %}</p>
+
+      <div class="value-grid" style="grid-template-columns:1fr; margin-top:32px; gap:16px;">
+        <div class="value-card">
+          <span class="value-card__icon" aria-hidden="true"><i class="fa-solid fa-location-dot"></i></span>
+          <strong><a href="{{ site.maps_url }}" target="_blank" rel="noopener">Merzouga, Maroc<i class="fa-solid fa-arrow-up-right-from-square ext-link__icon" aria-hidden="true"></i><span class="sr-only"> {% trans "(s'ouvre dans un nouvel onglet)" %}</span></a></strong>
+          <p style="color:var(--charcoal-600); font-size:0.9rem; margin:4px 0 0;">{% trans "Aux portes de l'Erg Chebbi" %}</p>
+        </div>
+        <div class="value-card">
+          <span class="value-card__icon" aria-hidden="true"><i class="fa-solid fa-phone"></i></span>
+          <strong><a href="tel:{{ site.phone_tel }}">{{ site.phone }}</a></strong>
+          <p style="color:var(--charcoal-600); font-size:0.9rem; margin:4px 0 0;">{% trans "Disponible tous les jours" %}</p>
+        </div>
+        <div class="value-card">
+          <span class="value-card__icon" aria-hidden="true"><i class="fa-solid fa-envelope"></i></span>
+          <strong><a href="mailto:{{ site.email }}">{{ site.email }}</a></strong>
+        </div>
+      </div>
+    </div>
+
+    <div class="booking-card">
+      <h3 style="margin-top:0;">{% trans "Envoyer un message" %}</h3>
+      <form method="post">
+        {% csrf_token %}
+        <label for="{{ form.name.id_for_label }}">{% trans "Nom" %}</label>
+        {{ form.name }}
+        <label for="{{ form.email.id_for_label }}">Email</label>
+        {{ form.email }}
+        <label for="{{ form.phone.id_for_label }}">{% trans "Téléphone" %}</label>
+        {{ form.phone }}
+        <label for="{{ form.tour.id_for_label }}">{% trans "Circuit concerné" %}</label>
+        {{ form.tour }}
+        <label for="{{ form.message.id_for_label }}">Message</label>
+        {{ form.message }}
+        <div class="hp-field" aria-hidden="true"><label for="{{ form.website.id_for_label }}">Website</label>{{ form.website }}</div>
+        <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">{% trans "Envoyer" %}</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

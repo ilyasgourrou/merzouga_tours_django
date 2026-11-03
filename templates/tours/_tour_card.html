@@ -1,0 +1,26 @@
+{% load i18n %}
+<a href="{% url 'tours:tour_detail' tour.slug %}" class="tour-card">
+  <div class="tour-card__image">
+    {% if tour.cover_image %}
+      <img src="{{ tour.cover_image.url }}" alt="{{ tour.title }}" loading="lazy">
+    {% endif %}
+    <span class="tour-card__duration"><i class="fa-solid fa-clock" aria-hidden="true"></i>{% blocktrans count counter=tour.duration_days %}{{ counter }} jour{% plural %}{{ counter }} jours{% endblocktrans %}</span>
+  </div>
+  <div class="tour-card__body">
+    <span class="tour-card__cats">
+      {% for cat in tour.categories.all %}{{ cat.name }}{% if not forloop.last %} · {% endif %}{% endfor %}
+    </span>
+    <h3 class="tour-card__title">{{ tour.title }}</h3>
+    <p class="tour-card__desc">{{ tour.short_description }}</p>
+    {% if tour.average_rating %}
+      <div class="rating"><i class="fa-solid fa-star" aria-hidden="true"></i> <strong>{{ tour.average_rating }}</strong> ({% blocktrans count counter=tour.review_count %}{{ counter }} avis{% plural %}{{ counter }} avis{% endblocktrans %})</div>
+    {% endif %}
+    <div class="tour-card__footer">
+      <div class="tour-card__price mono">
+        {% if tour.discount_price %}<span class="old">{{ tour.price }} MAD</span>{{ tour.discount_price }}{% else %}{{ tour.price }}{% endif %} MAD
+        <br><small>{% trans "par personne" %}</small>
+      </div>
+      <span class="btn btn-ghost" style="padding:8px 14px; font-size:0.8rem;">{% trans "Voir" %}</span>
+    </div>
+  </div>
+</a>

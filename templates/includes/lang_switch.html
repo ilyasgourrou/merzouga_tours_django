@@ -1,0 +1,17 @@
+{% load i18n %}
+{% get_current_language as CURRENT_LANGUAGE %}
+{% get_language_info_list for LANGUAGES as languages %}
+<form action="{% url 'set_language' %}" method="post" class="lang-switch {{ variant }}" data-lang-switch>
+  {% csrf_token %}
+  <input name="next" type="hidden" value="{{ request.get_full_path }}">
+  <span class="lang-switch__globe" aria-hidden="true"><i class="fa-solid fa-globe"></i></span>
+  <div class="lang-switch__pill" role="group" aria-label="{% trans 'Langue' %}">
+    {% for language in languages %}
+      <button type="submit" name="language" value="{{ language.code }}"
+              class="lang-switch__btn{% if language.code == CURRENT_LANGUAGE %} is-active{% endif %}"
+              lang="{{ language.code }}"{% if language.code == CURRENT_LANGUAGE %} aria-current="true"{% endif %}>
+        {{ language.code|upper }}<span class="sr-only"> – {{ language.name_local|capfirst }}</span>
+      </button>
+    {% endfor %}
+  </div>
+</form>
