@@ -23,6 +23,7 @@ import dj_database_url
 from django.core.exceptions import ImproperlyConfigured
 from django.utils.translation import gettext_lazy as _
 
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
@@ -202,9 +203,9 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = "fr"
 LANGUAGES = [
-    ("fr", _("Français")),
-    ("en", _("English")),
-    ("es", _("Español")),
+    ("fr", "Français"),
+    ("en", "English"),
+    ("es", "Español"),
 ]
 LOCALE_PATHS = [BASE_DIR / "locale"]  # traductions de l'interface (fichiers .po)
 TIME_ZONE = "Africa/Casablanca"
