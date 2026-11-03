@@ -4,7 +4,7 @@ from urllib.parse import quote
 
 from django.conf import settings
 from django.utils.formats import date_format
-from django.utils.translation import gettext as _
+from django.utils.translation import gettext_lazy as _
 
 
 def normalize_digits(raw, default_country="212"):
