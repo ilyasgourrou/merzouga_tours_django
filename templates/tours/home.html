@@ -2,6 +2,7 @@
 {% load static i18n seo_tags %}
 {% block structured_data %}{% jsonld_agency %}{% endblock %}
 {% block content %}
+<link rel="stylesheet" href="{% static 'css/home-about.css' %}">
 
 <section class="hero">
   <div class="container hero__inner">
@@ -60,6 +61,43 @@
     {% else %}
       <p style="color:var(--charcoal-600);">{% trans "Nos circuits seront bientôt disponibles." %}</p>
     {% endif %}
+  </div>
+</section>
+
+<section class="section discover">
+  <div class="container">
+    <div class="discover__intro">
+      <h2>{% trans "Découvrez le Maroc avec Morocco Riwa Tours" %}</h2>
+      <p>{% trans "Morocco Riwa Tours est une agence locale spécialisée dans les excursions dans le désert et les circuits à travers le Maroc. Notre objectif est simple : faire découvrir le meilleur de notre pays à chaque voyageur, avec sincérité." %}</p>
+      <p>{% trans "Nous sommes une équipe de guides et de chauffeurs qui connaît le terrain, de Merzouga à Marrakech : les pistes, les familles, les meilleurs endroits pour voir le lever du soleil. Chaque circuit est préparé avec soin pour que vous repartiez avec des souvenirs qui durent." %}</p>
+    </div>
+
+    <div class="discover__grid">
+      <article class="discover-card">
+        {% trans "Dunes de sable doré dans le désert du Sahara" as alt_sahara %}
+        <img src="{% static 'img/home/home-sahara.jpg' %}" width="1200" height="800" loading="lazy" alt="{{ alt_sahara }}">
+        <h3>{% trans "Le Sahara comme jamais" %}</h3>
+        <p>{% trans "Vivez le désert de l'intérieur : balade à dos de dromadaire dans les dunes de l'Erg Chebbi, nuit sous tente berbère et ciel étoilé à perte de vue." %}</p>
+      </article>
+
+      <article class="discover-card">
+        {% trans "Cour intérieure d'un monument historique marocain décoré de zelliges" as alt_monuments %}
+        <img src="{% static 'img/home/home-monuments.jpg' %}" width="1200" height="800" loading="lazy" alt="{{ alt_monuments }}">
+        <h3>{% trans "Les trésors du patrimoine marocain" %}</h3>
+        <p>{% trans "Découvrez les kasbahs, les médinas et les palais qui racontent l'histoire du Maroc. Nos guides vous expliquent l'architecture, les traditions et les savoir-faire qui les entourent." %}</p>
+      </article>
+
+      <article class="discover-card">
+        {% trans "Ruelle aux murs bleus dans une ville marocaine" as alt_villages %}
+        <img src="{% static 'img/home/home-villages.jpg' %}" width="1200" height="800" loading="lazy" alt="{{ alt_villages }}">
+        <h3>{% trans "Des villes et des villages à explorer" %}</h3>
+        <p>{% trans "Des ruelles bleues de Chefchaouen aux villages de l'Atlas, laissez-vous guider vers des lieux authentiques, loin des sentiers battus, à votre rythme." %}</p>
+      </article>
+    </div>
+
+    <div class="discover__cta">
+      <a href="{% url 'tours:tour_list' %}" class="btn btn-primary">{% trans "Voir nos circuits" %}</a>
+    </div>
   </div>
 </section>
 
