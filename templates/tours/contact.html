@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% load i18n %}
+{% load i18n whatsapp_tags %}
 {% block title %}Contact — {{ site.name }}{% endblock %}
 {% block meta_description %}{% trans "Contactez Morocco Riwa Tours pour un devis, une question ou une réservation d'excursion dans le Sahara. Réponse rapide de notre équipe locale." %}{% endblock %}
 {% block content %}
@@ -10,10 +10,18 @@
       <h1>{% trans "Parlons de votre voyage" %}</h1>
       <p style="color:var(--charcoal-600); max-width:480px;">{% trans "Que ce soit pour une question, un devis personnalisé ou une réservation, notre équipe locale vous répond rapidement." %}</p>
 
+      {% whatsapp_contact_url as wa_url %}
+      {% if wa_url %}
+        <p style="color:var(--charcoal-600); margin:24px 0 12px;">{% trans "Une question ? Écrivez-nous directement sur WhatsApp." %}</p>
+        <a href="{{ wa_url }}" class="btn btn-whatsapp" style="max-width:420px;" target="_blank" rel="noopener">
+          <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>{% trans "Discuter sur WhatsApp" %}
+        </a>
+      {% endif %}
+
       <div class="value-grid" style="grid-template-columns:1fr; margin-top:32px; gap:16px;">
         <div class="value-card">
           <span class="value-card__icon" aria-hidden="true"><i class="fa-solid fa-location-dot"></i></span>
-          <strong><a href="{{ site.maps_url }}" target="_blank" rel="noopener">Merzouga, Maroc<i class="fa-solid fa-arrow-up-right-from-square ext-link__icon" aria-hidden="true"></i><span class="sr-only"> {% trans "(s'ouvre dans un nouvel onglet)" %}</span></a></strong>
+          <strong>Merzouga, Maroc</strong>
           <p style="color:var(--charcoal-600); font-size:0.9rem; margin:4px 0 0;">{% trans "Aux portes de l'Erg Chebbi" %}</p>
         </div>
         <div class="value-card">

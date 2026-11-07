@@ -634,3 +634,13 @@ msgid ""
 msgstr ""
 "Desde las calles azules de Chefchaouen hasta los pueblos del Atlas, déjese "
 "guiar hacia lugares auténticos, lejos de las rutas habituales, a su ritmo."
+
+#, python-format
+msgid "Bonjour %(site)s ! J'aimerais avoir des informations sur vos circuits."
+msgstr "¡Hola %(site)s! Me gustaría recibir información sobre sus circuitos."
+
+msgid "Une question ? Écrivez-nous directement sur WhatsApp."
+msgstr "¿Tiene alguna pregunta? Escríbanos directamente por WhatsApp."
+
+msgid "Discuter sur WhatsApp"
+msgstr "Chatear por WhatsApp"

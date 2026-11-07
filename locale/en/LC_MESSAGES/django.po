@@ -629,3 +629,13 @@ msgid ""
 msgstr ""
 "From the blue lanes of Chefchaouen to the villages of the Atlas, let us "
 "guide you to authentic places off the beaten track, at your own pace."
+
+#, python-format
+msgid "Bonjour %(site)s ! J'aimerais avoir des informations sur vos circuits."
+msgstr "Hello %(site)s! I would like some information about your tours."
+
+msgid "Une question ? Écrivez-nous directement sur WhatsApp."
+msgstr "Got a question? Write to us directly on WhatsApp."
+
+msgid "Discuter sur WhatsApp"
+msgstr "Chat on WhatsApp"
