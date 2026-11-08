@@ -1,0 +1,46 @@
+/* Hero de la page d'accueil avec photo (ne touche pas à la barre de navigation) */
+.hero--photo {
+  display: flex;
+  flex-direction: column;
+  min-height: clamp(560px, 82vh, 780px);
+  background: var(--sand-200);
+}
+/* La vague décorative colle au bas du hero (pas de marge sous elle) */
+.hero--photo { padding-bottom: 0; }
+
+/* Texte aligné à gauche, comme le logo de la barre de navigation */
+.hero--photo .hero__inner { flex: 1; width: 100%; max-width: 1180px; padding-bottom: 36px; }
+.hero--photo h1 { max-width: 760px; }
+
+/* Photo en fond, recadrée pour garder la caravane visible à droite */
+.hero__bg { position: absolute; inset: 0; z-index: 0; display: block; }
+.hero__bg img { width: 100%; height: 100%; object-fit: cover; object-position: 75% 60%; display: block; }
+
+/* Voile crème léger côté texte, pour la lisibilité (remplace les halos du hero d'origine) */
+.hero--photo::before {
+  z-index: 1;
+  background: linear-gradient(90deg, rgba(250,243,228,.55) 0%, rgba(250,243,228,.25) 42%, rgba(250,243,228,0) 68%);
+}
+
+/* Textes foncés sur la photo */
+.hero--photo .hero__eyebrow,
+.hero--photo h1,
+.hero--photo p { color: var(--charcoal-900); }
+.hero--photo .hero__stat strong { color: var(--dune-800); }
+.hero--photo .hero__stat span { color: var(--charcoal-900); }
+
+/* La vague du bas reste au-dessus de la photo */
+.hero--photo .dune-divider { position: relative; z-index: 2; }
+
+@media (max-width: 767px) {
+  .hero--photo { min-height: 0; }
+  .hero__bg img { object-position: center; }
+  .hero--photo::before {
+    background: linear-gradient(180deg, rgba(250,243,228,.72) 0%, rgba(250,243,228,.5) 60%, rgba(250,243,228,.15) 100%);
+  }
+}
+
+/* Sur grand écran, le texte s'aligne exactement sur le logo */
+@media (min-width: 1200px) {
+  .hero--photo .hero__inner { padding-left: 0; padding-right: 0; }
+}

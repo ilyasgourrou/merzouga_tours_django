@@ -3,15 +3,20 @@
 {% block structured_data %}{% jsonld_agency %}{% endblock %}
 {% block content %}
 <link rel="stylesheet" href="{% static 'css/home-about.css' %}">
+<link rel="stylesheet" href="{% static 'css/home-hero.css' %}">
 
-<section class="hero">
+<section class="hero hero--photo">
+  <picture class="hero__bg">
+    <source media="(max-width: 767px)" srcset="{% static 'img/home/gallery_home-mobile.jpg' %}" width="1000" height="1250">
+    <img src="{% static 'img/home/gallery_home.jpg' %}" width="2400" height="1167" alt="" fetchpriority="high" decoding="async">
+  </picture>
   <div class="container hero__inner">
     <span class="hero__eyebrow">{% trans "Merzouga · Porte du Sahara" %}</span>
     <h1>{% trans "Vivez le désert comme un nomade, pas comme un touriste." %}</h1>
     <p>{% trans "Excursions dans les dunes de l'Erg Chebbi, nuits en campement berbère et circuits sur mesure, organisés par une agence locale qui connaît le Sahara depuis toujours." %}</p>
     <div class="hero__actions">
       <a href="{% url 'tours:tour_list' %}" class="btn btn-primary">{% trans "Voir nos circuits" %}</a>
-      <a href="{% url 'tours:contact' %}" class="btn btn-ghost" style="border-color:#fff; color:#fff;">{% trans "Demander un devis" %}</a>
+      <a href="{% url 'tours:contact' %}" class="btn btn-ghost">{% trans "Demander un devis" %}</a>
     </div>
     <div class="hero__stats">
       <div class="hero__stat"><strong>500+</strong><span>{% trans "voyageurs accompagnés" %}</span></div>
